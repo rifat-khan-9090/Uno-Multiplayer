@@ -1,0 +1,6 @@
+{
+  "name": "UNO Multiplayer Engine",
+  "description": "Full-stack web-based UNO multiplayer card game application with Core Game Logic Engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
