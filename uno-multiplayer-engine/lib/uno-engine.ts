@@ -25,7 +25,7 @@ export class UnoGame {
   messages: string[] = [];
 
   constructor(playerNames: string[]) {
-    if (playerNames.length < 2 || playerNames.length > 10) {
+    if (playerNames.length < 1 || playerNames.length > 10) {
       throw new Error("Game requires between 2 and 10 players.");
     }
     this.players = playerNames.map((name, i) => ({
