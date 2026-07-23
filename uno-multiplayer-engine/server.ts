@@ -6,7 +6,7 @@ import { parse } from 'url';
 import { UnoGame, Player } from './lib/uno-engine';
 
 const dev = process.env.NODE_ENV !== 'production';
-const hostname = 'localhost';
+const hostname = process.env.HOSTNAME || '0.0.0.0';
 const port = parseInt(process.env.PORT || '3000', 10);
 
 const app = next({ dev, hostname, port });
@@ -219,7 +219,7 @@ app.prepare().then(() => {
     handle(req, res, parsedUrl);
   });
 
-  httpServer.listen(port, () => {
-    console.log(`> Ready on http://${hostname}:${port}`);
+  httpServer.listen(port, '0.0.0.0', () => {
+    console.log(`> Ready on http://0.0.0.0:${port}`);
   });
 });
